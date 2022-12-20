@@ -1,26 +1,44 @@
 import { INavData } from '@coreui/angular';
 import { IconComponent } from '@coreui/icons-angular';
+import { url } from 'inspector';
 
 export const navItems: INavData[] = [
+  // {
+  //   name: 'Dashboard',
+  //   url: '/dashboard',
+  //   iconComponent: { name: 'cil-speedometer' },
+  // },
+  // {
+  //   title: true,
+  //   name: 'Theme'
+  // },
+  // {
+  //   name: 'Colors',
+  //   url: '/theme/colors',
+  //   iconComponent: { name: 'cil-drop' }
+  // },
+  // {
+  //   name: 'Typography',
+  //   url: '/theme/typography',
+  //   linkProps: { fragment: 'someAnchor' },
+  //   iconComponent: { name: 'cil-pencil' }
+  // },
+
   {
-    name: 'Dashboard',
-    url: '/dashboard',
-    iconComponent: { name: 'cil-speedometer' },
+    name: 'Filmes',
+    title: true
   },
+
   {
-    title: true,
-    name: 'Theme'
-  },
-  {
-    name: 'Colors',
-    url: '/theme/colors',
-    iconComponent: { name: 'cil-drop' }
-  },
-  {
-    name: 'Typography',
-    url: '/theme/typography',
-    linkProps: { fragment: 'someAnchor' },
-    iconComponent: { name: 'cil-pencil' }
+    name: 'Generos',
+    url: '/generos',
+    iconComponent: { name: 'cil-movie' },
+    children: [
+      {
+        name: 'teste',
+        url: '/teste',
+      }
+    ]
   },
   {
     name: 'Components',
@@ -229,19 +247,19 @@ export const navItems: INavData[] = [
       }
     ]
   },
-  // {
-  //   name: 'Widgets',
-  //   url: '/widgets',
-  //   iconComponent: { name: 'cil-calculator' },
-  //   badge: {
-  //     color: 'info',
-  //     text: 'NEW'
-  //   }
-  // },
-  // {
-  //   title: true,
-  //   name: 'Extras'
-  // },
+  {
+    name: 'Widgets',
+    url: '/widgets',
+    iconComponent: { name: 'cil-calculator' },
+    badge: {
+      color: 'info',
+      text: 'NEW'
+    }
+  },
+  {
+    title: true,
+    name: 'Extras'
+  },
   // {
   //   name: 'Pages',
   //   url: '/login',
