@@ -1,3 +1,4 @@
+import { MoviesModule } from './views/movies/movies.module';
 import { TesteComponent } from './views/teste/teste.component';
 import { NgModule } from '@angular/core';
 import { HashLocationStrategy, LocationStrategy, PathLocationStrategy } from '@angular/common';
@@ -86,6 +87,7 @@ const APP_CONTAINERS = [
     BadgeModule,
     ListGroupModule,
     CardModule,
+    MoviesModule
   ],
   providers: [
     {

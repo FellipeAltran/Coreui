@@ -1,0 +1,130 @@
+:host {
+  .legend {
+    small {
+      font-size: x-small;
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --gray: rgba(255, 255, 255, 0);
+  --gray-medium: rgba(255, 255, 255, 0.2);
+  --gray-light: rgba(255, 255, 255, 0.5);
+  --orange: rgba(243, 63, 63, 1);
+  --red: rgba(164, 27, 27, 1);
+
+}
+
+// main {
+//   // min-height: 50vh;
+//   // box-sizing: border-box;
+// }
+
+.bemVindo {
+  background-color: #222222;
+  color: #d9d9d9;
+  padding: 1em 1.5em;
+  border: 0.1em solid #202020;
+  border-radius: .5em;
+}
+
+main .search {
+  display: grid;
+  grid-template-columns: 9fr 1fr;
+  margin-top: 0.3em;
+  border-radius: .5em;
+  background-color: #222222;
+  position: relative;
+}
+
+main .search img {
+  position: absolute;
+  left: 0.6em;
+  top: 0.4em;
+}
+
+main .search input {
+  background-color: transparent;
+  border: none;
+  margin-left: 3em;
+  color: #d9d9d9;
+  font-size: 80%;
+  padding: 0.6em;
+}
+
+main .search input:focus {
+  outline: none;
+}
+
+main .search button {
+  border: none;
+  display: block;
+  background-color: rgba(164, 27, 27, 1);
+  border-radius: 0 0.5em 0.5em 0;
+  color: #202020;
+  font-size: 80%;
+  transition: 0.2s;
+}
+
+
+main .cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  grid-gap: 0.3em;
+}
+
+main .cards .card {
+  display: grid;
+  // grid-template-rows: 1fr 1fr 1fr;
+  background-color: #202020;
+  border-radius: 0 1em 0 1em;
+  border: none;
+  cursor: pointer;
+}
+
+main .cards .card img {
+  width: 100%;
+  border-radius: 0 1em 0 0;
+}
+
+main .cards .card .card-content {
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+}
+
+main .cards .card span {
+  padding: 0.2em 1em 0.2em 1em;
+  font-size: 90%;
+  color: #d9d9d9;
+}
+
+main .cards .card p {
+  padding: 0.2em 1em 0.2em 1em;
+  font-size: 70%;
+  margin-bottom: 0;
+  color: #d9d9d9;
+}
+
+@media screen and (max-width: 1300px){
+    main .cards{
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 1000px){
+  main .cards{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 800px){
+  main .cards{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

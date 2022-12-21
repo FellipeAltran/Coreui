@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -24,6 +25,11 @@ const routes: Routes = [
         path: 'dashboard',
         loadChildren: () =>
           import('./views/dashboard/dashboard.module').then((m) => m.DashboardModule)
+      },
+      {
+        path: 'movies',
+        loadChildren: () =>
+          import('./views/movies/movies-routing.module').then((m) => m.MoviesRoutingModule)
       },
       {
         path: 'theme',

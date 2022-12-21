@@ -1,0 +1,31 @@
+<section>
+  <main>
+    <div class="bemVindo">
+      <p>Seja Bem vindo ao LocaHost</p>
+      <div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit necessitatibus aliquid quia, explicabo vitae
+        blanditiis iusto voluptatem culpa velit inventore possimus ad saepe nisi nostrum deserunt cumque quidem
+        similique vero?
+      </div>
+    </div>
+    <div class="search">
+      <img src="../../../assets/images/search.svg" alt="search">
+      <input type="text" placeholder="Busque um filme">
+      <button>Buscar</button>
+    </div>
+    <nav>
+      <div class="cards">
+        <ng-container *ngFor="let film of films">
+          <div class="card">
+            <img src="{{ getImage(film.poster_path) }}" alt="poster">
+            <div class="card-content">
+              <p>{{ film.title }}</p>
+              <p> {{ film.release_date }} </p>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </nav>
+  </main>
+
+</section>
