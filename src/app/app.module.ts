@@ -1,5 +1,5 @@
+import { HttpClientModule } from '@angular/common/http';
 import { MoviesModule } from './views/movies/movies.module';
-import { TesteComponent } from './views/teste/teste.component';
 import { NgModule } from '@angular/core';
 import { HashLocationStrategy, LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { BrowserModule, Title } from '@angular/platform-browser';
@@ -59,7 +59,7 @@ const APP_CONTAINERS = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, ...APP_CONTAINERS, TesteComponent],
+  declarations: [AppComponent, ...APP_CONTAINERS],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -87,7 +87,8 @@ const APP_CONTAINERS = [
     BadgeModule,
     ListGroupModule,
     CardModule,
-    MoviesModule
+    MoviesModule,
+    HttpClientModule
   ],
   providers: [
     {
