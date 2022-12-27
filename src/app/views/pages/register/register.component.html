@@ -1,4 +1,4 @@
-<div class="bg-light min-vh-100 d-flex flex-row align-items-center" >
+<div class="bg-light min-vh-100 d-flex flex-row align-items-center">
   <c-container>
     <c-row class="justify-content-center">
       <c-col lg="7" md="9" xl="6">
@@ -12,20 +12,53 @@
                 <span cInputGroupText>
                   <svg cIcon name="cilUser"></svg>
                 </span>
-                <input autoComplete="name" cFormControl placeholder="Username" formControlName="name" />
+                <input autoComplete="name" cFormControl placeholder="Username" formControlName="name" required />
+                
               </c-input-group>
+              <span *ngIf="getForm('name')?.invalid && (getForm('name')?.dirty || getForm('name')?.touched)" class="alert">
+
+                <div *ngIf="getForm('name')?.errors?.['required']">
+                  Name is required.
+                </div>
+                <div *ngIf="getForm('name')?.errors?.['minlength']">
+                  Name must be at least 4 characters long.
+                </div>
+
+              </span>
 
               <c-input-group class="mb-3">
                 <span cInputGroupText>@</span>
-                <input autoComplete="email" cFormControl placeholder="Email" formControlName="email" />
+                <input autoComplete="email" cFormControl placeholder="Email" formControlName="email" required />
+                
               </c-input-group>
+              <span *ngIf="getForm('email')?.invalid && (getForm('email')?.dirty || getForm('email')?.touched)" class="alert">
+
+                <div *ngIf="getForm('email')?.errors?.['required']">
+                  Email is required.
+                </div>
+                <div *ngIf="getForm('email')?.errors?.['email']">
+                  Email is invalid.
+                </div>
+
+              </span>
 
               <c-input-group class="mb-3">
                 <span cInputGroupText>
                   <svg cIcon name="cilLockLocked"></svg>
                 </span>
-                <input autoComplete="password" cFormControl placeholder="Password" type="password" formControlName="password" />
+                <input autoComplete="password" cFormControl placeholder="Password" type="password"
+                  formControlName="password" required />
               </c-input-group>
+              <span *ngIf="getForm('password')?.invalid && (getForm('password')?.dirty || getForm('password')?.touched)" class="alert">
+
+                <div *ngIf="getForm('password')?.errors?.['required']">
+                  Password is required.
+                </div>
+                <div *ngIf="getForm('password')?.errors?.['minlength']">
+                  Password must be at least 4 characters long.
+                </div>
+
+              </span>
               <!-- <c-input-group class="mb-4">
                 <span cInputGroupText>
                   <svg cIcon name="cilLockLocked"></svg>
@@ -33,7 +66,7 @@
                 <input autoComplete="new-password" cFormControl placeholder="Repeat password" type="password" />
               </c-input-group> -->
               <div class="d-grid">
-                <button cButton color="success" (click)="sendRequest()" type="reset" routerLink="/login">Create Account</button>
+                <button cButton color="success" (click)="sendRequest()">Create Account</button>
               </div>
             </form>
           </c-card-body>

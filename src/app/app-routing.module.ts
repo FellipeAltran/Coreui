@@ -1,4 +1,4 @@
-
+import { ForgotPasswordComponent } from './views/pages/forgot-password/forgot-password.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -104,6 +104,13 @@ const routes: Routes = [
     component: RegisterComponent,
     data: {
       title: 'Register Page'
+    }
+  },
+  {
+    path: 'forgotpassword',
+    component: ForgotPasswordComponent,
+    data: {
+      title: 'Forgot Password Page'
     }
   },
   {path: '**', redirectTo: 'dashboard'}

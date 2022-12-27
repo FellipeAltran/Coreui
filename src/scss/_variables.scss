@@ -6,7 +6,7 @@
 
 // Color system
 
-// $white:     #fff;
+$white:     #fff;
 // $gray-base: #3c4b64;
 // $gray-100:  #ebedef;
 // $gray-200:  #d8dbe0;
@@ -715,7 +715,7 @@ $body-bg:                   #030202;
 // $input-padding-x-lg:                    $input-btn-padding-x-lg;
 // $input-font-size-lg:                    $input-btn-font-size-lg;
 
-// $input-bg:                              $white;
+$input-bg:                              $white;
 // $input-disabled-bg:                     $gray-200;
 // $input-disabled-border-color:           $gray-400;
 
@@ -1402,8 +1402,8 @@ $body-bg:                   #030202;
 // $header-padding-x:              $spacer / 2;
 // $header-brand-font-size:        $font-size-lg;
 // $header-color:                  $medium-emphasis-dark;
-// $header-bg:                     $white;
-// $header-border-color:           $border-color;
+$header-bg:                     #222222;
+$header-border-color:           none;
 // $header-border-width:           1px;
 // $header-hover-color:            $high-emphasis-dark;
 // $header-active-color:           $high-emphasis-dark;
@@ -1620,7 +1620,7 @@ $sidebar-header-bg:                        #222222;
 // $footer-bg:            $gray-100;
 // $footer-color:         $body-color;
 // $footer-border-width:  1px;
-// $footer-border-color:  $border-color;
+$footer-border-color:  none;
 // scss-docs-end footer-variables
 
 // Spinners
