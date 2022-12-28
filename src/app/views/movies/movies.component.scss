@@ -6,9 +6,9 @@
   }
 }
 
-* {
-  box-sizing: border-box;
-}
+// * {
+//   box-sizing: border-box;
+// }
 
 :root {
   --gray: rgba(255, 255, 255, 0);
@@ -62,13 +62,21 @@ main .search input:focus {
 }
 
 main .search button {
-  border: none;
+  border: solid 2px rgba(164, 27, 27, 1);
   display: block;
   background-color: rgba(164, 27, 27, 1);
   border-radius: 0 0.5em 0.5em 0;
   color: #202020;
   font-size: 80%;
+  font-weight: 600;
   transition: 0.2s;
+  box-sizing: border-box;
+  
+}
+
+main .search button:hover{
+  background-color: transparent;
+  color: rgba(164, 27, 27, 1);
 }
 
 
@@ -125,6 +133,9 @@ main .cards .card p {
 }
 
 @media screen and (max-width: 400px){
+  *{
+    font-size: 5px;
+  }
   main .cards{
     grid-template-columns: 1fr 1fr 1fr;
   }

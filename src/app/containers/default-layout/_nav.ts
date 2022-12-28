@@ -25,20 +25,14 @@ export const navItems: INavData[] = [
   // },
 
   {
-    name: 'Filmes',
+    name: 'LocaHost',
     title: true
   },
 
   {
-    name: 'List',
+    name: 'Movies',
     url: '/movies',
-    iconComponent: { name: 'cil-movie' },
-    children: [
-      {
-        name: 'Movies',
-        url: '/movies',
-      }
-    ]
+    iconComponent: { name: 'cil-movie' }
   },
   // {
   //   name: 'Components',

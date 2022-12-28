@@ -35,17 +35,17 @@ export class RegisterComponent implements OnInit {
 
   sendRequest() {
     // console.log(JSON.stringify(this.formUsuario.getRawValue()));
-    if (this.formUsuario.invalid) {
-      this.formUsuario.markAllAsTouched();
-      return;
-    }
+    // if (this.formUsuario.invalid) {
+    //   this.formUsuario.markAllAsTouched();
+    //   return;
+    // }
 
     this.registerService.save(this.formUsuario.getRawValue()).subscribe((value) => {
-      if (value == true) {
+      if (value.boolean != false) {
         this.router.navigate([`/login`]);
-        this.registerService.sucessMessage('Cadastro realizado com sucesso!');
+        this.registerService.sucessMessage(value.message);
       }else {
-        this.registerService.errorMessage('Falha ao cadastrar');
+        this.registerService.errorMessage(value.message);
       }
     });
   }

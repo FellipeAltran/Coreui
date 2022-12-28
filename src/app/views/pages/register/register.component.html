@@ -15,7 +15,7 @@
                 <input autoComplete="name" cFormControl placeholder="Username" formControlName="name" required />
                 
               </c-input-group>
-              <span *ngIf="getForm('name')?.invalid && (getForm('name')?.dirty || getForm('name')?.touched)" class="alert">
+              <!-- <span *ngIf="getForm('name')?.invalid && (getForm('name')?.dirty || getForm('name')?.touched)" class="alert">
 
                 <div *ngIf="getForm('name')?.errors?.['required']">
                   Name is required.
@@ -24,14 +24,14 @@
                   Name must be at least 4 characters long.
                 </div>
 
-              </span>
+              </span> -->
 
               <c-input-group class="mb-3">
                 <span cInputGroupText>@</span>
                 <input autoComplete="email" cFormControl placeholder="Email" formControlName="email" required />
                 
               </c-input-group>
-              <span *ngIf="getForm('email')?.invalid && (getForm('email')?.dirty || getForm('email')?.touched)" class="alert">
+              <!-- <span *ngIf="getForm('email')?.invalid && (getForm('email')?.dirty || getForm('email')?.touched)" class="alert">
 
                 <div *ngIf="getForm('email')?.errors?.['required']">
                   Email is required.
@@ -40,7 +40,7 @@
                   Email is invalid.
                 </div>
 
-              </span>
+              </span> -->
 
               <c-input-group class="mb-3">
                 <span cInputGroupText>
@@ -49,7 +49,7 @@
                 <input autoComplete="password" cFormControl placeholder="Password" type="password"
                   formControlName="password" required />
               </c-input-group>
-              <span *ngIf="getForm('password')?.invalid && (getForm('password')?.dirty || getForm('password')?.touched)" class="alert">
+              <!-- <span *ngIf="getForm('password')?.invalid && (getForm('password')?.dirty || getForm('password')?.touched)" class="alert">
 
                 <div *ngIf="getForm('password')?.errors?.['required']">
                   Password is required.
@@ -58,7 +58,7 @@
                   Password must be at least 4 characters long.
                 </div>
 
-              </span>
+              </span> -->
               <!-- <c-input-group class="mb-4">
                 <span cInputGroupText>
                   <svg cIcon name="cilLockLocked"></svg>

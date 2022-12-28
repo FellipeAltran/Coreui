@@ -13,18 +13,18 @@ export class RegisterService {
 
   constructor(private http: HttpClient, private toastr: ToastrService) { }
 
-  save(item: any): Observable<any>{
+  save(item: any): Observable<any> {
     const url = `${this.baseUrl}register`;
     // console.log(url);
     return this.http.post<any>(url, item).pipe(
-      map(obj => obj)); 
+      map(obj => obj));
   }
 
-  sucessMessage(message: string){
+  sucessMessage(message: string) {  
     this.toastr.success(`${message}`);
   }
 
-  errorMessage(message: string){
+  errorMessage(message: string) {
     this.toastr.error(`${message}`)
   }
 }

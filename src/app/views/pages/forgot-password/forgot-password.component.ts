@@ -31,11 +31,11 @@ export class ForgotPasswordComponent implements OnInit {
     // console.log(JSON.stringify(this.formNewPassword.getRawValue()));
     const obj = this.formNewPassword.getRawValue();
     this.service.updatePasswordUser(obj.email, obj.newPassword).subscribe((value) => {
-      if (value == true) {
+      if (value.boolean == true) {
         this.router.navigate([`/login`]);
-        this.service.sucessMessage('Senha atualizada');
+        this.service.sucessMessage(value.message);
       }else {
-        this.service.errorMessage('Falha ao atualizar a senha');
+        this.service.errorMessage(value.message);
       }
     });
   }

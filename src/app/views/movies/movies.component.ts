@@ -26,7 +26,6 @@ export class MoviesComponent implements OnInit {
     for (var i in results) {
       this.films.push(results[i]);
     }
-    // console.log(this.films);
   }
 
   getImage(url: string) {

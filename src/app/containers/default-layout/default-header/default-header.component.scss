@@ -1,0 +1,15 @@
+// * {
+//     box-sizing: border-box;
+// }
+
+section {
+    display: block;
+    width: 100%;
+}
+
+.title{
+    color: rgba(164, 27, 27, 1);
+    display: grid;
+    justify-content: center;
+    font-size: 2.5em;
+}
