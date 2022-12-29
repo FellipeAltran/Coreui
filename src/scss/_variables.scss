@@ -732,7 +732,7 @@ $input-bg:                              $white;
 // $input-focus-border-color:              tint-color($component-active-bg, 50%);
 // $input-focus-color:                     $input-color;
 // $input-focus-width:                     $input-btn-focus-width;
-// $input-focus-box-shadow:                $input-btn-focus-box-shadow;
+$input-focus-box-shadow:                none;
 
 // $input-placeholder-color:               $gray-600;
 // $input-plaintext-color:                 $body-color;

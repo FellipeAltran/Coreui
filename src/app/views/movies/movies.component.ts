@@ -11,10 +11,13 @@ export class MoviesComponent implements OnInit {
 
   films: Array<Movie> = [];
 
+  user: any = {}
+
   constructor(private service: MoviesService) { }
 
   ngOnInit(): void {
-    this.readResults()
+    this.readResults();
+    this.account();
   }
 
   async readResults() {
@@ -26,6 +29,11 @@ export class MoviesComponent implements OnInit {
     for (var i in results) {
       this.films.push(results[i]);
     }
+  }
+
+  async account() {
+    const user = await localStorage.getItem('user');
+    this.user = await JSON.parse(user!);
   }
 
   getImage(url: string) {

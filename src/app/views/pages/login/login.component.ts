@@ -33,11 +33,16 @@ export class LoginComponent {
     const obj = this.formLogin.getRawValue();
 
     this.loginservice.loginUser(obj.email, obj.password).subscribe((value) => {
-      // console.log(value);
       if (value == true) {
-        this.router.navigate([`/movies`]);
-        this.loginservice.sucessMessage('Logado com sucesso!');
-      }else {
+        this.loginservice.takeUser(obj.email).subscribe((teste) => {
+          console.log(teste)
+          const local = JSON.stringify(teste);
+          localStorage.setItem('user', local);
+          this.router.navigate([`/movies`]);
+          this.loginservice.sucessMessage('Logado com sucesso!');
+        });
+
+      } else {
         this.loginservice.errorMessage('Falha ao logar!');
       }
     });

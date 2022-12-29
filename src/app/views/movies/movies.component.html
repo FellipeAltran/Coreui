@@ -1,7 +1,18 @@
 <section>
   <main>
+    <div class="userCard">
+      <img src="../../../assets/img/avatars/1.jpg" alt="avatar">
+      <div class="userContent">
+        <p>{{ user.name }}</p>
+        <p>{{ user.email }}</p>
+      </div>
+      <a routerLink="/#"><svg cIcon name="cilSettings"></svg></a>
+    </div>
+    <div>
+
+    </div>
     <div class="bemVindo">
-      <p>Seja Bem vindo ao Locahost</p>
+      <p>Seja Bem vindo {{ user.name }} ao Locahost</p>
       <div>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit necessitatibus aliquid quia, explicabo vitae
         blanditiis iusto voluptatem culpa velit inventore possimus ad saepe nisi nostrum deserunt cumque quidem

@@ -19,6 +19,12 @@ export class LoginService {
       map(obj => obj));
   }
 
+  takeUser(email: string): Observable<any>{
+    const url = `${this.baseUrl}searchEmail`;
+    return this.http.post<any>(url, { email: email }).pipe(
+      map(obj => obj));
+  }
+
   sucessMessage(message: string){
     this.toastr.success(`${message}`);
   }

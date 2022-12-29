@@ -91,7 +91,6 @@ import {
   cilDiamond,
   cilCoffee,
   cilMovie,
-
 } from '@coreui/icons';
 
 export const iconSubset = {
