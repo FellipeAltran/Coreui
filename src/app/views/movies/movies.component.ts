@@ -1,6 +1,6 @@
 import { Movie } from './movie.model';
 import { MoviesService } from './movies.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 
 @Component({
   selector: 'app-movies',
@@ -11,14 +11,14 @@ export class MoviesComponent implements OnInit {
 
   films: Array<Movie> = [];
 
-  user: any = {}
+  user: any = {};
 
   constructor(private service: MoviesService) { }
 
   ngOnInit(): void {
     this.readResults();
-    this.account();
-  }
+      this.account();
+    }
 
   async readResults() {
 
@@ -40,4 +40,5 @@ export class MoviesComponent implements OnInit {
     const urlImage = `https://image.tmdb.org/t/p/w200${url}`
     return urlImage;
   }
+
 }

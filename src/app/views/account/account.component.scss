@@ -1,0 +1,79 @@
+// * {
+//     box-sizing: border-box;
+// }
+
+
+main .container{
+    display: grid;
+    align-items: center;
+    grid-template-rows: 1fr 1fr;
+    width: 35em;
+}
+main .content{
+    display: grid;
+    justify-content: center;
+    background-color: #d9d9d9;
+    color: black;
+    grid-template-rows: 1fr 0.5fr;
+    margin-top: 2em;
+}
+
+
+main .container img{
+    border: solid 5px #202020;
+    width: 12em;
+    height: 12em;
+    border-radius: 7em;
+    margin-top: 1em;
+    position: relative;
+    left: 11em;
+}
+
+main .informations{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-top: 1em;
+}
+
+main .informations p{
+    background: #202020;
+    color: #d9d9d9;
+    padding: 0.5em;
+    border-radius: 1em;
+    padding-left: 1.5em;
+}
+
+main .informations .name a{
+    position: relative;
+    color: #d9d9d9;
+    left: 24em;
+    cursor: pointer;
+    transition: 2s;
+}
+
+main .informations .password a{
+    position: relative;
+    color: #d9d9d9;
+    left: 20.5em;
+    cursor: pointer;
+    transition: 2s;
+}
+
+main .container .button {
+    display: block;
+    justify-self: center;
+}
+
+main .container .button button{
+    align-self: center;
+    background-color: rgba(164, 27, 27, 1);
+    border: solid 2px rgba(164, 27, 27, 1);
+    border-radius: 1em;
+    padding: 0.3em 5em 0.3em 5em;
+    transition: 0.5s;
+}
+
+main .container .button button:hover{
+    background-color: transparent;
+    color: rgba(164, 27, 27, 1);
+}

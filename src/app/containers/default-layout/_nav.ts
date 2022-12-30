@@ -34,6 +34,11 @@ export const navItems: INavData[] = [
     url: '/movies',
     iconComponent: { name: 'cil-movie' }
   },
+  {
+    name: 'Settings',
+    url: '/account',
+    iconComponent: { name: 'cil-settings' }
+  },
   // {
   //   name: 'Components',
   //   title: true

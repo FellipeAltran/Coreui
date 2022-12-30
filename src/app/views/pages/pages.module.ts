@@ -12,6 +12,7 @@ import { ButtonModule, CardModule, FormModule, GridModule } from '@coreui/angula
 import { IconModule } from '@coreui/icons-angular';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AccountComponent } from '../account/account.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RegisterComponent,
     Page404Component,
     Page500Component,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    AccountComponent
   ],
   imports: [
     CommonModule,

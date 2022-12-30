@@ -1,3 +1,5 @@
+import { Title } from '@angular/platform-browser';
+import { AccountComponent } from './views/account/account.component';
 import { ForgotPasswordComponent } from './views/pages/forgot-password/forgot-password.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -30,6 +32,11 @@ const routes: Routes = [
         path: 'movies',
         loadChildren: () =>
           import('./views/movies/movies-routing.module').then((m) => m.MoviesRoutingModule)
+      },
+      {
+        path: 'account',
+        loadChildren: () =>
+          import('./views/account/account-routing.module').then((m) => m.AccountRoutingModule)
       },
       {
         path: 'theme',

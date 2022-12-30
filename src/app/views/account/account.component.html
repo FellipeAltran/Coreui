@@ -1,0 +1,23 @@
+<section>
+    <main>
+        <div class="container">
+            <img src="../../../assets/img/avatars/1.jpg" alt="avatar">
+            <div class="informations">
+                <div class="name">
+                    <p>Name: {{ user.name }} <a (click)="openModal()"><svg cIcon name="cilPen" onclick=""></svg></a></p> 
+                </div>
+                <div class="email">
+                    <p>Email: {{ user.email }}</p>
+                </div>
+                <div class="password">
+                    <p>Password: {{ user.password }} <a routerLink="movies"><svg cIcon name="cilPen"></svg></a></p> 
+                </div>
+            </div>
+            <div class="button">
+                <button>
+                    save
+                </button>
+            </div>
+        </div>
+    </main>
+</section>
