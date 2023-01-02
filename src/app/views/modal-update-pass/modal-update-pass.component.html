@@ -1,23 +1,21 @@
-<!-- <c-modal
-  [keyboard]="false"
-  [transition]="false"
-  backdrop="static"
-  class="position-static d-block show"
-  id="modalStatic"
->
+<div>
   <c-modal-header>
-    <h5 cModalTitle>Change your Password</h5>
-    <button cButtonClose></button>
+    <h5 cModalTitle>Change Name</h5>
   </c-modal-header>
   <c-modal-body>
-    teste
+    <form cForm [formGroup]="formUpdatePass">
+      <div>
+        <label for="password">Password:</label>
+        <input type="number" id="password" placeholder="Write your password" cFormControl formControlName="password">
+      </div>
+      <div>
+        <label for="password">Confirm Password:</label>
+        <input type="number" id="confirmPassword" placeholder="Confirm password" cFormControl
+          formControlName="confirmPassword">
+      </div>
+    </form>
   </c-modal-body>
   <c-modal-footer>
-    <button cButton color="secondary">Close</button>
-    <button cButton color="primary">Save changes</button>
+    <button (click)="save()">save</button>
   </c-modal-footer>
-</c-modal> -->
-
-<div>
-    ajkdkasdak
 </div>

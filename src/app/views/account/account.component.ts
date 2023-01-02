@@ -28,12 +28,20 @@ export class AccountComponent implements OnInit {
     this.user = await JSON.parse(user!);
   }
 
-  openModal() {
+  openModalPass() {
     const user = {
         id: 10
       };
     this.modalRef = this.modalService.show(ModalUpdatePassComponent, {
-      initialState : user
+      initialState: user as any
+    });
+    this.modalRef.onHide.subscribe((value) => {
+      // console.log(typeof(value));
+      if (value.hasOwnProperty('password')){
+        this.user = value;
+        this.modalRef.hide();
+      }
+      
     });
   }
 

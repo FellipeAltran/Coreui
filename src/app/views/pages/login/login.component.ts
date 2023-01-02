@@ -22,7 +22,7 @@ export class LoginComponent {
     this.formLogin = new FormGroup({
       email: new FormControl(login.email, [Validators.required, Validators.email]),
       password: new FormControl(login.password, [Validators.required, Validators.minLength(8)])
-    })
+    });
   }
 
   forgotPassword() {

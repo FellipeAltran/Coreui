@@ -1,3 +1,5 @@
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { ModalModule as cuiModal } from '@coreui/angular';
 import { HttpClientModule } from '@angular/common/http';
 import { MoviesModule } from './views/movies/movies.module';
 import { NgModule } from '@angular/core';
@@ -6,7 +8,6 @@ import { BrowserModule, Title } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms'
 import { CommonModule } from '@angular/common';
-import { ModalModule } from 'ngx-bootstrap/modal';
 
 import {
   PERFECT_SCROLLBAR_CONFIG,
@@ -40,7 +41,6 @@ import {
   GridModule,
   HeaderModule,
   ListGroupModule,
-  // ModalModule,
   NavModule,
   ProgressModule,
   SharedModule,
@@ -52,6 +52,7 @@ import {
 import { IconModule, IconSetService } from '@coreui/icons-angular';
 import { ToastrModule } from 'ngx-toastr';
 import { ModalUpdatePassComponent } from './views/modal-update-pass/modal-update-pass.component';
+import { ModalUpdateNameComponent } from './views/modal-update-name/modal-update-name.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -64,7 +65,7 @@ const APP_CONTAINERS = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, ...APP_CONTAINERS, ModalUpdatePassComponent],
+  declarations: [AppComponent, ...APP_CONTAINERS, ModalUpdatePassComponent, ModalUpdateNameComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -96,7 +97,8 @@ const APP_CONTAINERS = [
     HttpClientModule,
     CommonModule,
     ToastrModule.forRoot(),
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    cuiModal
   ],
   providers: [
     {

@@ -4,6 +4,7 @@
 
 
 main .container{
+    height: 100%;
     display: grid;
     align-items: center;
     grid-template-rows: 1fr 1fr;
@@ -17,7 +18,6 @@ main .content{
     grid-template-rows: 1fr 0.5fr;
     margin-top: 2em;
 }
-
 
 main .container img{
     border: solid 5px #202020;
@@ -41,12 +41,14 @@ main .informations p{
     padding: 0.5em;
     border-radius: 1em;
     padding-left: 1.5em;
+    display: grid;
+    grid-template-columns: 1fr 0.1fr;
 }
 
 main .informations .name a{
     position: relative;
     color: #d9d9d9;
-    left: 24em;
+    left: 1.5em;
     cursor: pointer;
     transition: 2s;
 }
@@ -54,26 +56,8 @@ main .informations .name a{
 main .informations .password a{
     position: relative;
     color: #d9d9d9;
-    left: 20.5em;
+    left: 1.5em;
     cursor: pointer;
     transition: 2s;
 }
 
-main .container .button {
-    display: block;
-    justify-self: center;
-}
-
-main .container .button button{
-    align-self: center;
-    background-color: rgba(164, 27, 27, 1);
-    border: solid 2px rgba(164, 27, 27, 1);
-    border-radius: 1em;
-    padding: 0.3em 5em 0.3em 5em;
-    transition: 0.5s;
-}
-
-main .container .button button:hover{
-    background-color: transparent;
-    color: rgba(164, 27, 27, 1);
-}
