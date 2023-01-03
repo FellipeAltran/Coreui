@@ -10,14 +10,32 @@ main .container{
     grid-template-rows: 1fr 1fr;
     width: 35em;
 }
-main .content{
+
+main .container .teste{
     display: grid;
-    justify-content: center;
-    background-color: #d9d9d9;
-    color: black;
-    grid-template-rows: 1fr 0.5fr;
-    margin-top: 2em;
+    grid-template-columns: 0.1fr 0.9fr;
 }
+
+main .container .teste a{
+    position: relative;
+    top: 2em;
+    left: 1em;
+    color: rgba(164, 27, 27, 1);
+    cursor: pointer;
+}
+
+main .container #exit{
+    width: 1.7em;
+    height: 1.7em;
+}
+// main .content{
+//     display: grid;
+//     justify-content: center;
+//     background-color: #d9d9d9;
+//     color: black;
+//     grid-template-rows: 1fr 0.5fr;
+//     margin-top: 2em;
+// }
 
 main .container img{
     border: solid 5px #202020;
@@ -26,7 +44,7 @@ main .container img{
     border-radius: 7em;
     margin-top: 1em;
     position: relative;
-    left: 11em;
+    left: 7.5em;
 }
 
 main .informations{
@@ -60,4 +78,3 @@ main .informations .password a{
     cursor: pointer;
     transition: 2s;
 }
-

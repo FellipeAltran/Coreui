@@ -1,18 +1,22 @@
-<section>
-    <main>
-        <div class="container">
+<main>
+    <div class="container">
+        <div class="teste">
+            <div>
+                <a><svg cIcon name="cilAccountLogout" id="exit"></svg></a>
+            </div>
             <img src="../../../assets/img/avatars/1.jpg" alt="avatar">
-            <div class="informations">
-                <div class="name">
-                    <p>Name: {{ user.name }} <a (click)="openModalPass()"><svg cIcon name="cilPen" onclick=""></svg></a></p> 
-                </div>
-                <div class="email">
-                    <p>Email: {{ user.email }}</p>
-                </div>
-                <div class="password">
-                    <p>Password: {{ user.password }} <a (click)="openModalPass()"><svg cIcon name="cilPen"></svg></a></p> 
-                </div>
+        </div>
+        <div class="informations">
+            <div class="name">
+                <p>Name: {{ user.name }} <a (click)="openModalName()"><svg cIcon name="cilPen"></svg></a></p>
+            </div>
+            <div class="email">
+                <p>Email: {{ user.email }}</p>
+            </div>
+            <div class="password">
+                <p>Password: {{ user.password }} <a (click)="openModalPass()"><svg cIcon name="cilPen"></svg></a>
+                </p>
             </div>
         </div>
-    </main>
-</section>
+    </div>
+</main>
