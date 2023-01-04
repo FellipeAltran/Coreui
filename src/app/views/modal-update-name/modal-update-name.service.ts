@@ -14,7 +14,7 @@ export class ModalUpdateNameService {
 
   updateName(oldName: string, newName: string): Observable<any> {
     const url = `${this.baseUrl}changeName`;
-    return this.http.post<any>(url, { oldName: oldName, newName: newName }).pipe(
+    return this.http.post<any>(url, { oldname: oldName, newname: newName }).pipe(
       map(obj => obj));
   }
 

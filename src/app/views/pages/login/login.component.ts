@@ -16,6 +16,7 @@ export class LoginComponent {
 
   constructor(private loginservice: LoginService, private router: Router) {
     this.createForm(new Login());
+    localStorage.removeItem('user');
   }
 
   createForm(login: Login) {

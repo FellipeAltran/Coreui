@@ -31,7 +31,6 @@ export class ModalUpdateNameComponent implements OnInit {
     const obj = this.formUpdateName.getRawValue();
     const tempUser = JSON.parse(localStorage.getItem('user')!);
 
-    if (obj.name != null) {
       this.service.updateName(tempUser.name, obj.name).subscribe((value) => {
         if (value.boolean == true) {
           tempUser.name = obj.name;
@@ -43,9 +42,6 @@ export class ModalUpdateNameComponent implements OnInit {
           this.service.errorMessage(value.message);
         }
       });
-    } else {
-      this.service.errorMessage('Invalid user name!');
     }
       
-  }
 }
