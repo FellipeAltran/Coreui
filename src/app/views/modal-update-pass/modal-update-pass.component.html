@@ -6,8 +6,20 @@
     <form cForm [formGroup]="formUpdatePass">
       <div>
         <label for="password">Password:</label>
-        <input type="number" id="password" placeholder="Write your password" cFormControl formControlName="password">
+        <input type="password" id="password" placeholder="Write your password" cFormControl formControlName="password" required>
       </div>
+
+      <span
+        *ngIf="getForm('password')?.invalid && (getForm('password')?.dirty || getForm('password')?.touched)"
+        class="validator">
+        <div *ngIf="getForm('password')?.errors?.['required']">
+          Password is required.
+        </div>
+        <div *ngIf="getForm('password')?.errors?.['minlength']">
+          Password must be at least 8 characters long.
+        </div>
+      </span>
+
       <div>
         <label for="password">Confirm Password:</label>
         <input type="number" id="confirmPassword" placeholder="Confirm password" cFormControl

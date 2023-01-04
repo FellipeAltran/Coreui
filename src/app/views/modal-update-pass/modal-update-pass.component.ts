@@ -24,6 +24,18 @@ export class ModalUpdatePassComponent implements OnInit {
     this.createForm(new UpdatePass())
   }
 
+  getForm(property: string) {
+    return this.formUpdatePass.get(property);
+  }
+
+  sendRequest() {
+    console.log(JSON.stringify(this.formUpdatePass.getRawValue()));
+    if (this.formUpdatePass.invalid) {
+      this.formUpdatePass.markAllAsTouched();
+      return;
+    }
+  }
+
   createForm(updatepass: UpdatePass) {
     this.formUpdatePass = new FormGroup({
       password: new FormControl(updatepass.password, [Validators.required, Validators.minLength(8)]),
