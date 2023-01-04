@@ -34,11 +34,11 @@ export class RegisterComponent implements OnInit {
   }
 
   sendRequest() {
-    // console.log(JSON.stringify(this.formUsuario.getRawValue()));
-    // if (this.formUsuario.invalid) {
-    //   this.formUsuario.markAllAsTouched();
-    //   return;
-    // }
+    console.log(JSON.stringify(this.formUsuario.getRawValue()));
+    if (this.formUsuario.invalid) {
+      this.formUsuario.markAllAsTouched();
+      return;
+    }
 
     this.registerService.save(this.formUsuario.getRawValue()).subscribe((value) => {
       if (value.boolean != false) {
