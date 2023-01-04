@@ -20,6 +20,18 @@ export class ForgotPasswordComponent implements OnInit {
     this.changePassword(new changePassword);
   }
 
+  getForm(property: string) {
+    return this.formNewPassword.get(property);
+  }
+
+  sendRequest() {
+    console.log(JSON.stringify(this.formNewPassword.getRawValue()));
+    if (this.formNewPassword.invalid) {
+      this.formNewPassword.markAllAsTouched();
+      return;
+    }
+  }
+
   changePassword(changepassword: changePassword){
     this.formNewPassword = new FormGroup({
       email: new FormControl(changepassword.email, [Validators.required, Validators.email]),
@@ -28,7 +40,6 @@ export class ForgotPasswordComponent implements OnInit {
   }
 
   savePassword(){
-    // console.log(JSON.stringify(this.formNewPassword.getRawValue()));
     const obj = this.formNewPassword.getRawValue();
     this.service.updatePasswordUser(obj.email, obj.newPassword).subscribe((value) => {
       if (value.boolean == true) {
