@@ -7,7 +7,6 @@
             <form cForm [formGroup]="formUsuario">
               <h1>Register</h1>
               <p class="text-medium-emphasis">Create your account</p>
-
               <c-input-group class="mt-2">
                 <span cInputGroupText style="color: #fff; background: #1a1a1a; border: solid 1px #1a1a1a;">
                   <svg cIcon name="cilUser"></svg>
@@ -50,14 +49,12 @@
 
               <span *ngIf="getForm('password')?.invalid && (getForm('password')?.dirty || getForm('password')?.touched)"
               class="validator">
-
                 <div *ngIf="getForm('password')?.errors?.['required']">
                   Password is required.
                 </div>
                 <div *ngIf="getForm('password')?.errors?.['minlength']">
-                  Password must be at least 4 characters long.
+                  Password must be at least 8 characters long.
                 </div>
-
               </span>
 
               <div class="d-grid mt-2">

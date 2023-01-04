@@ -29,6 +29,18 @@ export class LoginComponent {
     this.router.navigate([`/forgotpassword`]);
   }
 
+  getForm(property: string) {
+    return this.formLogin.get(property);
+  }
+
+  sendRequest() {
+    console.log(JSON.stringify(this.formLogin.getRawValue()));
+    if (this.formLogin.invalid) {
+      this.formLogin.markAllAsTouched();
+      return;
+    }
+  }
+
   async login() {
     const obj = this.formLogin.getRawValue();
 

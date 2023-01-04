@@ -5,25 +5,48 @@
         <c-card-group>
           <c-card class="p-4">
             <c-card-body>
+              
               <form cForm [formGroup]="formLogin">
                 <h1>Login</h1>
                 <p class="text-medium-emphasis">Sign In to your account</p>
-                
-                <c-input-group class="mb-3">
+
+                <c-input-group class="mt-2">
                   <span cInputGroupText style="color: #fff; background: #1a1a1a; border: solid 1px #1a1a1a;">@</span>
-                  <input autoComplete="email" cFormControl placeholder="Email" formControlName="email" required style="border: solid 1px #1a1a1a;"/>
+                  <input autoComplete="email" cFormControl placeholder="Email" formControlName="email" required
+                    style="border: solid 1px #1a1a1a;" />
                 </c-input-group>
 
-                <c-input-group class="mb-3">
+                <span *ngIf="getForm('email')?.invalid && (getForm('email')?.dirty || getForm('email')?.touched)"
+                  class="validator">
+                  <div *ngIf="getForm('email')?.errors?.['required']">
+                    Email is required.
+                  </div>
+                  <div *ngIf="getForm('email')?.errors?.['email']">
+                    Email is invalid.
+                  </div>
+                </span>
+
+                <c-input-group class="mt-2">
                   <span cInputGroupText style="background-color: #1a1a1a; color: #fff; border: solid 1px #1a1a1a;">
                     <svg cIcon name="cilLockLocked"></svg>
                   </span>
-                  <input autoComplete="current-password" cFormControl placeholder="Password" type="password"
-                    formControlName="password" required style="border: solid 1px #1a1a1a;"/>
+                  <input autoComplete="password" cFormControl placeholder="Password" type="password"
+                    formControlName="password" required style="border: solid 1px #1a1a1a;" />
                 </c-input-group>
 
-                <div class="d-grid">
-                  <button cButton (click)="login()" style="background: #BE0000; border: #BE0000;">  
+                <span
+                  *ngIf="getForm('password')?.invalid && (getForm('password')?.dirty || getForm('password')?.touched)"
+                  class="validator">
+                  <div *ngIf="getForm('password')?.errors?.['required']">
+                    Password is required.
+                  </div>
+                  <div *ngIf="getForm('password')?.errors?.['minlength']">
+                    Password must be at least 8 characters long.
+                  </div>
+                </span>
+
+                <div class="d-grid mt-2">
+                  <button cButton (click)="login()" style="background: #BE0000; border: #BE0000;">
                     Login
                   </button>
                 </div>
@@ -45,7 +68,8 @@
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                   tempor incididunt ut labore et dolore magna aliqua.
                 </p>
-                <button [active]="true" cButton class="mt-3" routerLink="/register" style="background: #BE0000; border: #BE0000; font-size: 16px;">
+                <button [active]="true" cButton class="mt-3" routerLink="/register"
+                  style="background: #BE0000; border: #BE0000; font-size: 16px;">
                   Register Now!
                 </button>
               </div>
